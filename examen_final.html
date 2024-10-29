@@ -1,0 +1,98 @@
+<html>
+<head>
+    <title>Flow Bolivia</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css"/>
+    <script>
+        function showPanel(panelId) {
+            document.querySelectorAll('.panel').forEach(panel => {
+                panel.classList.remove('active');
+            });
+            document.getElementById(panelId).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+    <div id="panel1" class="panel active">
+        <div class="left-panell">
+            <div class="form-container">
+                <h2>REGISTRO DE PASANTES</h2>
+                <label for="codigo">Código:</label>
+                <input id="codigo" name="codigo" type="text"/>
+                <label for="nombre">Nombre:</label>
+                <input id="nombre" name="nombre" type="text"/>
+                <label for="apellidoPaterno">Apellido Paterno:</label>
+                <input id="apellidoPaterno" name="apellidoPaterno" type="text"/>
+                <label for="apellidoMaterno">Apellido Materno:</label>
+                <input id="apellidoMaterno" name="apellidoMaterno" type="text"/>
+                <label for="email">Correo electrónico:</label>
+                <input id="email" name="email" type="email"/>
+                <label>Sexo:</label>
+                <select id="sexo" name="sexo">
+                    <option value="Seleccione"></option>
+                    <option value="Hombre">Masculino</option>
+                    <option value="Mujer">Femenino</option>
+                </select>
+                <label for="Nivel de Estudios">Nivel de Estudios:</label>
+                <select id="Nivel de Estudios" name="Nivel de Estudios">
+                    <option value="Seleccione"></option>
+                    <option value="No_Tiene">No Tiene</option>
+                    <option value="escolar">Escolar</option>
+                    <option value="universitario">Universitario</option>
+
+                </select>
+                <label for="departamento">Departamento:</label>
+                <select id="departamento" name="departamento">
+                    <option value="Seleccione"></option>
+                    <option value="departamento1">Pando</option>
+                    <option value="departamento2">Beni</option>
+                    <option value="departamento3">Santa Cruz</option>
+                    <option value="departamento4">Cochabamba</option>
+                    <option value="departamento5">La paz</option>
+                    <option value="departamento6">Oruro</option>
+                    <option value="departamento7">Potosí</option>
+                    <option value="departamento8">Chuquisaca</option>
+                    <option value="departamento9">Tarija</option>
+
+                </select>
+                <label for="cv">Adjunte su Currículum:</label>
+                <input id="cv" name="cv" type="file"/>
+                <div class="button" onclick="showPanel('panel2')">Registrar</div>
+            </div>
+        </div>
+    </div>
+
+        <div id="panel2" class="panel">
+            <div class="center-panel">
+                <div class="header">YPFB HIDROCARBUROS</div>
+                <nav class="menu">
+                    <ul class="menu-list">
+                        <li class="menu-item"><a href="#inicio">Inicio</a></li>
+                        <li class="menu-item"><a href="#servicios">Servicios</a></li>
+                        <li class="menu-item"><a href="#clientes">Clientes</a></li>
+                        <li class="menu-item"><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="welcome">
+                    <h2>BIENVENIDO A LA EMPRESA DE DISTRIBUCION DE PETROLEO MAS GRANDE DE BOLIVIA</h2>
+                    <p>DESCUBRE NUESTROS CAMPOS LABORALES DISPONIBLE </p>
+                </div>
+                <img alt="Petroleo" height="576" src="https://th.bing.com/th/id/OIP.CKdCrHeIECdg6MSbzAHD-gHaEK?rs=1&pid=ImgDetMain" width="1024"/>
+                <div class="button" onclick="showPanel('panel3')">Página Externa</div>
+            </div>
+        </div>
+        <div id="panel3" class="panel">
+            <div class="bottom-panel">
+                <h3>¡Bienvenido!</h3>
+                <p>¡Haz click en "ir a la pagina externa" para ver nuestra pagina oficial!</p>
+                <div class="external-link">
+                    <a href="https://www.ypfb.gob.bo/es/">Ir a Página Externa</a>
+                </div>
+                <div class="button" onclick="showPanel('panel2')">Volver</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
